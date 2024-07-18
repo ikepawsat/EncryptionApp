@@ -2,11 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>Video Processing</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
+    <div class="container">
+      <div id="drop-area" class="drop-area">
+        <p>Drag and drop a video file here or click to select one</p>
+        <input type="file" id="fileElem" accept="video/*" style="display:none" />
+        <label for="fileElem" class="upload-button">Select File</label>
+      </div>
+      <select id="compression">
+        <option value="none">No Compression</option>
+        <option value="75">75%</option>
+        <option value="50">50%</option>
+        <option value="25">25%</option>
+      </select>
+      <button id="processButton">Process</button>
+    </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
